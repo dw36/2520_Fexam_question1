@@ -8,9 +8,24 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// Step 2 here , to replace the "Homepage" to "createCard"
 app.get("/", (req, res) => {
-  res.render("homepage");
+  res.render("createCard");
 });
+
+//Step 3 , to add this app.post
+app.post("/create", (req, res) => {
+  const user =req.body;  // here means to post the info from createCard.ejs to the server
+
+  // step 9, use math to generate a id
+  
+})
+
+//Step 4, to install npm ( do: npm install)
+//Step 5, do: npm start
+//Step 6, go to public folder create a file call: createCard.css
+//step7, go to public folder, in createCard.css add some code
+
 app.get("/people/:id", (req, res) => {
   res.render("people");
 });

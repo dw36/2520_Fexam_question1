@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">   
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--step 8, add code here to link css file-->
+    <link rel="stylesheet" href="createCard.css">
+    <!--step 9, go to index.js-->
+  
   </head>
-  <body></body>
+  <body>
+    <!--
+      step 1 
+      to create the inputs 
+      in this body type the follow to create input boxes
+    shortcuts: input:text*7   ( it will generate 7 inputs)
+
+      step2 go to index.js  find Step 2 and read
+        
+    -->
+    <form action="/create" method="post">
+      <input type="text" name="Your fullname">
+      <input type="text" name="About Me" >
+      <input type="text" name="GitHub URL" >
+      <input type="text" name="Twitter URL" >
+      <input type="text" name="Favourite Books (Seperate by comma" >
+      <input type="text" name="Favourite Artists (Seperate by comma" >
+      <input type="submit" value="Create Site">
+    </form>
+  </body>
 </html>
