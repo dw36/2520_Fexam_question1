@@ -27,10 +27,11 @@
                       />
                     </div>
                     <div class="infos">
+                      <!-- step 13, then go step 14 line 77-->
                       <span
-                        ><i class="fas fa-user-circle"></i>&nbsp;&nbsp;Armaan
-                        Dhanji</span
-                      ><span
+                      ><i class="fas fa-user-circle"></i>&nbsp;&nbsp; <%= user.fullname %></span> <!-- step 13.1  change the name to dynamic, then go line 77-->
+                      
+                      <span
                         ><i class="fas fa-briefcase"></i>&nbsp;&nbsp;Full Stack
                         Developer</span
                       ><span
@@ -72,7 +73,9 @@
               <div class="lx-row">
                 <div class="lx-row lx-card">
                   <h1 class="title">
-                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to Armaan's
+
+                    <!--Step 14 , then, step 15 go to line 88 -->
+                    <i class="fas fa-info-circle"></i>&nbsp;Welcome to <%= user.fullname %> <!--step 14, change the name to dynamic -->>
                     corner of the Internet
                   </h1>
                 </div>
@@ -82,14 +85,8 @@
                   </h1>
                   <div class="text">
                     <p>
-                      Hi, my name is&nbsp;<b>Armaan Dhanji</b>, but I'm better
-                      known by my nickname&nbsp;<i>@armaand</i>, and I'm a
-                      teacher in the School of Computing at BCIT.
-                    </p>
-                    <p>
-                      I&nbsp;&nbsp;<i class="fas fa-heart"></i>&nbsp; to code
-                      full-stack projects, always looking for innovative ways to
-                      write code that follows practices!
+                      <!--Step 15, then step 16 go line 126-->
+                      <%= user.aboutMe %> <!--Step 15, change the hard coded to dynamic, then step go line 126-->>
                     </p>
                   </div>
                 </div>
@@ -126,12 +123,16 @@
                     <i class="fas fa-book"></i>&nbsp;My favorite books
                   </h1>
                   <div class="text">
+                    <!-- step 16, then go line 131-->
                     <ol>
-                      <li>
+                      <%= user.favoriteBooks.forEach(book => { %>  <!--step 16.1-->
+                       <li>
                         <p>
-                          <b>The Lord of the Rings</b>&nbsp;- J. R. R. Tolkien
+                          <b><%= book.split("-")[0] %></b> <%= book.split("-")[1] %> <!--  delete this and do other <b>The Lord of the Rings</b>&nbsp;- J. R. R. Tolkien  -->
                         </p>
-                      </li>
+                       </li>
+                      <% }) %>   <!-- step 16.2   add the end sytax here, Step 16 finished , question 1 finished-->
+
                       <li>
                         <p><b>Foundation series</b>&nbsp;- Isaac Asimov</p>
                       </li>
